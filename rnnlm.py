@@ -15,5 +15,5 @@ losses = rnn.train(X_train[:100], y_train[:100], learning_rate=0.005, nepoch=10,
 
 np.random.seed(10)
 print('Using object.backward')
-rnn = Model(word_dim, hidden_dim, USE_ETAGS = Falseautograd = False)
+rnn = Model(word_dim, hidden_dim, use_autograd = False)
 losses = rnn.train(X_train[:100], y_train[:100], learning_rate=0.005, nepoch=10, evaluate_loss_after=1)
