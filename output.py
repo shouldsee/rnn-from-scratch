@@ -1,4 +1,5 @@
-import numpy as np
+from autograd import numpy as np
+# import numpy as np
 
 class Softmax:
     def predict(self, x):
@@ -11,5 +12,8 @@ class Softmax:
 
     def diff(self, x, y):
         probs = self.predict(x)
-        probs[y] -= 1.0
+        target = np.zeros((len(probs)),'float32')
+        target[y] = 1.
+        probs = probs - target
+        # probs[y] -= 1.0
         return probs

@@ -1,4 +1,5 @@
-import numpy as np
+from autograd import numpy as np
+# import numpy as np
 
 class MultiplyGate:
     def forward(self,W, x):
